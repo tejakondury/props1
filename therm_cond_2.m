@@ -62,7 +62,7 @@ km=kb*b1*b0;
 
 
 
-# material Graphite-Epoxy UD composite laminate
+%# material Graphite-Epoxy UD composite laminate
 
 cond=[0.01386,0.00262,0.00205,0.00173,0.00173];
 temp_cond=[10,524,565,815,3316]
@@ -77,13 +77,15 @@ sp=[1.2250,2.0569,5.0095,4.9046,1.5939,2.5098];
 temp_sp=[10,330,357,496,524,3316]
 
 
-hold on
+
 figure
+hold on
 ezplot(km,[theta_0 1073])
+scatter(temp_cond,cond)
 title('Variation of Km with temp')
 xlabel('temp in Kelvin')
 ylabel('Km W/mK')
-scatter(temp_cond,cond)
+
 %xlabel('Temp in Kelvin')
 %ylabel('Thermal conductivity W/mK')
 %title('variation of thermal cond Chen')
